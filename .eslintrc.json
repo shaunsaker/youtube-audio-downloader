@@ -1,0 +1,15 @@
+{
+  "env": {
+    "node": true, // this is the best starting point
+    "browser": true, // for react web
+    "es6": true // enables es6 features
+  },
+  "extends": "airbnb-base",
+  "parser": "babel-eslint", // needed to make babel stuff work properly
+  "rules": {
+    "import/no-named-as-default": 0,
+    "function-paren-newline": ["error", "consistent"],
+    "no-console": "off",
+    "arrow-parens": "off"
+  }
+}
