@@ -10,8 +10,8 @@ The simplest way is using HomeBrew. Need other methods? See the internet.
 
 ```
 brew install ffmpeg
-git clone X
-cd X
+git clone https://github.com/shaunsaker/youtube-audio-downloader.git
+cd youtube-audio-downloader
 yarn
 ```
 
