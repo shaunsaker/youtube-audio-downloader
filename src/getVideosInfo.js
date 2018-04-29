@@ -9,5 +9,7 @@ export default function getVideoIDs({ youTubeAPIKey, playlistID, maxResults }, o
     .then((items) => {
       onSuccess(items);
     })
-    .catch(onError);
+    .catch((error) => {
+      onError(new Error(error));
+    });
 }

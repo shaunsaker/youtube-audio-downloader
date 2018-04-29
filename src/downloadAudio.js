@@ -15,7 +15,9 @@ function downloadAudio(videoID, onError, onProgress, onAudioDownload) {
   // Download video and save as MP3 file
   YD.download(videoID);
 
-  YD.on('error', onError);
+  YD.on('error', (error) => {
+    onError(new Error(error));
+  });
 
   YD.on('progress', onProgress);
 

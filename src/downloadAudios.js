@@ -17,15 +17,24 @@ function getAudios(videoIDs, downloadedVideoIDsPath) {
     async.eachSeries(
       filteredVideoIDs,
       (videoID, callback) => {
-        downloadAudio(videoID, onError, onProgress, () => {
-          saveDownloadedVideoID(videoID, onError, () => {
+        downloadAudio(
+          videoID,
+          (error) => {
+            onError(error);
+            // Continue with the next one
             callback(null);
-          });
-        });
+          },
+          onProgress,
+          () => {
+            saveDownloadedVideoID(videoID, onError, () => {
+              callback(null);
+            });
+          },
+        );
       },
       (error) => {
         if (error) {
-          onError(error);
+          onError(new Error(error));
         } else {
           console.log('All files have been downloaded successfully');
         }
