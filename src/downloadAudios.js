@@ -21,8 +21,10 @@ function getAudios(videoIDs, downloadedVideoIDsPath) {
           videoID,
           (error) => {
             onError(error);
-            // Continue with the next one
-            callback(null);
+            // Save ID and continue with the next one
+            saveDownloadedVideoID(videoID, onError, () => {
+              callback(null);
+            });
           },
           onProgress,
           () => {
