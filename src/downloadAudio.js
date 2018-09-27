@@ -6,7 +6,7 @@ function downloadAudio(videoID, onError, onProgress, onAudioDownload) {
   // Configure YoutubeMp3Downloader with your settings
   const YD = new YoutubeMp3Downloader({
     ffmpegPath: config.ffmpegPath, // Where is the FFmpeg binary located?
-    outputPath: './output', // Where should the downloaded and encoded files be stored?
+    outputPath: './src/output', // Where should the downloaded and encoded files be stored?
     youtubeVideoQuality: 'lowest', // What video quality should be used?
     queueParallelism: 1, // How many parallel downloads/encodes should be started?
     progressTimeout: 2000, // How long should be the interval of the progress reports
