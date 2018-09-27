@@ -48,7 +48,7 @@ function getAudios(videoIDs, downloadedVideoIDsPath) {
 export default function downloadAudios(videoIDsPath) {
   readFile(videoIDsPath, onError, (data) => {
     const videoIDs = JSON.parse(data);
-    const downloadedVideoIDsPath = './resources/downloadedVideoIDs.json';
+    const downloadedVideoIDsPath = './src/resources/downloadedVideoIDs.json';
 
     if (!fs.existsSync(downloadedVideoIDsPath)) {
       writeFile(downloadedVideoIDsPath, [], onError, () => {

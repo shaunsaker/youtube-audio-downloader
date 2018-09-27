@@ -4,7 +4,7 @@ import onError from './utils/onError';
 import parseVideosList from './parseVideosList';
 import downloadAudios from './downloadAudios';
 
-const videoIDsPath = './resources/videoIDs.json';
+const videoIDsPath = './src/resources/videoIDs.json';
 
 function onGetVideosInfoSuccess(videos) {
   console.log('Successfully retrieved video IDs');
