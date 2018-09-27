@@ -33,3 +33,4 @@ npm start UU1UMshhDjWrHIDFWkVKZxbw 10
 # TODO
 
 - If MAX_RESULTS === 10 and I have already downloaded 10 results, the app should get the next 10 results that I don't have
+- Create empty output directory if not present (fails without this)
