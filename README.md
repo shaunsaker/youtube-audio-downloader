@@ -21,13 +21,13 @@ Add your youTubeAPIKey and ffmpegPath to **config/index.js**
 # Usage
 
 ```
-npm start PLAYLIST_ID MAX_RESULTS
+yarn start PLAYLIST_ID MAX_RESULTS
 ```
 
 # Example
 
 ```
-npm start UU1UMshhDjWrHIDFWkVKZxbw 10
+yarn start UU1UMshhDjWrHIDFWkVKZxbw 10
 ```
 
 # TODO
