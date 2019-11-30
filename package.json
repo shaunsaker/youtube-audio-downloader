@@ -14,7 +14,7 @@
     "async": "^2.6.0",
     "fs": "^0.0.1-security",
     "rimraf": "^2.6.2",
-    "youtube-mp3-downloader": "^0.5.3",
+    "youtube-mp3-downloader": "^0.6.2",
     "youtube-playlist-info": "^1.1.2"
   },
   "devDependencies": {
