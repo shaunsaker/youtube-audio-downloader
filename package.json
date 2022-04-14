@@ -11,7 +11,7 @@
   "author": "Shaun Saker",
   "license": "MIT",
   "dependencies": {
-    "async": "^2.6.0",
+    "async": "^3.2.2",
     "fs": "^0.0.1-security",
     "rimraf": "^2.6.2",
     "youtube-mp3-downloader": "^0.6.2",
