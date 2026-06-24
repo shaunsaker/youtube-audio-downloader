@@ -13,6 +13,7 @@ function getAudios(videoIDs, downloadedVideoIDsPath) {
     // Filtering of downloadedVideoIDs
     const downloadedVideoIDs = JSON.parse(downloadedVideoIDsData);
     const filteredVideoIDs = diffArrays(videoIDs, downloadedVideoIDs);
+    console.log('HERE', filteredVideoIDs, videoIDs, downloadedVideoIDs);
 
     async.eachSeries(
       filteredVideoIDs,
@@ -20,6 +21,7 @@ function getAudios(videoIDs, downloadedVideoIDsPath) {
         downloadAudio(
           videoID,
           (error) => {
+            console.log('HERE', error, videoID);
             onError(error);
             // Save ID and continue with the next one
             saveDownloadedVideoID(videoID, onError, () => {

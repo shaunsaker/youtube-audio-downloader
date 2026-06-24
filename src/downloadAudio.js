@@ -7,7 +7,7 @@ function downloadAudio(videoID, onError, onProgress, onAudioDownload) {
   const YD = new YoutubeMp3Downloader({
     ffmpegPath: config.ffmpegPath, // Where is the FFmpeg binary located?
     outputPath: './src/output', // Where should the downloaded and encoded files be stored?
-    youtubeVideoQuality: 'highest', // What video quality should be used?
+    youtubeVideoQuality: 'highestaudio', // What video quality should be used?
     queueParallelism: 1, // How many parallel downloads/encodes should be started?
     progressTimeout: 1000, // How long should be the interval of the progress reports
   });
@@ -16,7 +16,7 @@ function downloadAudio(videoID, onError, onProgress, onAudioDownload) {
   YD.download(videoID);
 
   YD.on('error', (error) => {
-    onError(new Error(error));
+    onError(error);
   });
 
   YD.on('progress', onProgress);
